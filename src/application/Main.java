@@ -9,10 +9,17 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
-
 public class Main extends Application {
 	private Stage primaryStage;
 	private AnchorPane mainLayout;
+	
+	/**
+	 * This method starts the application the Federation App
+	 * 
+	 * @param primaryStage primaryStage for the app
+	 * @author iog693
+	 * @throws IOException
+	 */
 	@Override
 	public void start(Stage primaryStage) throws IOException 
 	{
@@ -21,6 +28,12 @@ public class Main extends Application {
 		showMainView();
 	}
 	
+	/**
+	 * Shows the main view of the application
+	 * 
+	 * @author iog693
+	 * @throws IOException
+	 */
 	public void showMainView() throws IOException
 	{
 		FXMLLoader loader = new FXMLLoader();
@@ -31,6 +44,12 @@ public class Main extends Application {
 		primaryStage.show();
 	}
 	
+	/**
+	 * main function that launches the application
+	 * 
+	 * @author iog693
+	 * @param args
+	 */
 	public static void main(String[] args) 
 	{
 		launch(args);

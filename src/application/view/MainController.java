@@ -26,6 +26,12 @@ public class MainController implements EventHandler <ActionEvent> {
 	@FXML
 	private TextArea info;
 	
+	/**
+	 * Handles the submit button
+	 * 
+	 * @param A click on the submit button
+	 * @author iog693
+	 */
 	public void handle(ActionEvent e)
 	{
 		Fleet f = new Fleet("MotherShip");
@@ -36,6 +42,13 @@ public class MainController implements EventHandler <ActionEvent> {
 		ShipText(ans, f);
 	}
 	
+	/**
+	 * Searches for the ship submitted in the database
+	 * 
+	 * @author iog693
+	 * @param Gets information of the ship entered in to search
+	 * @param Fleet fo ships
+	 */
 	public void ShipText(String shipText, Fleet f) 
 	{
 		String ship = f.searchStarship(shipText);

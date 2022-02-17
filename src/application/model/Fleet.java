@@ -15,26 +15,56 @@ public class Fleet {
 		this.StarshipAL = new ArrayList<Starship>();
 	}
 	
+	/**
+	 * Getter for fleet name
+	 * 
+	 * @author iog693
+	 * @return Fleet name
+	 */
 	public String getFleetName()
 	{
 		return fleetName;
 	}
 	
+	/**
+	 * Setter for fleet name
+	 * 
+	 * @author iog693
+	 * @param A string for new fleet name
+	 */
 	public void setFleetName(String fleetName)
 	{
 		this.fleetName = fleetName;
 	}
 	
+	/**
+	 * Getter for StarshipAL
+	 * 
+	 * @author iog693
+	 * @return Arraylist of starship objects
+	 */
 	public ArrayList<Starship> getStarshipAL()
 	{
 		return StarshipAL;
 	}
 	
-	public void setStarshipAL()
+	/**
+	 * Setter for StarshipAL
+	 * 
+	 * @author Devon
+	 * @param ArrayList of starship objects
+	 */
+	public void setStarshipAL(ArrayList<Starship> StarshipAL)
 	{
-		this.StarshipAL = new ArrayList<Starship>();
+		this.StarshipAL = StarshipAL;
 	}
 	
+	/**
+	 * To string function for a fleet object
+	 * 
+	 * @author iog693
+	 * @return String of fleet object
+	 */
 	public String toString()
 	{
 		int i;
@@ -48,11 +78,23 @@ public class Fleet {
 		return info;
 	}
 	
+	/**
+	 * Adds starship to starship arraylist
+	 * 
+	 * @author iog693
+	 * @param Starship object
+	 */
 	public void addStarship(Starship s)
 	{
 		StarshipAL.add(s);
 	}
 	
+	/**
+	 * Loads starship objects from file into an arraylist
+	 * 
+	 * @author iog693
+	 * @param file name of file that contains starship information
+	 */
 	public void loadStarships(String fileName)
 	{
 		File file = new File(fileName);
@@ -79,6 +121,12 @@ public class Fleet {
 		}
 	}
 	
+	/**
+	 * Loads file with member objects into a member arraylist
+	 * 
+	 * @author iog693
+	 * @param File name of file that contains member information
+	 */
 	public void loadMembers(String fileName) 
 	{
 		int i;
@@ -113,7 +161,12 @@ public class Fleet {
 		}
 	 }
 	
-	
+	/**
+	 * Searches for a specific name of a ship and returns ship info and crew
+	 * 
+	 * @param Name of a ship
+	 * @return String of Ship info followed by all members of the ship
+	 */
 	public String searchStarship(String shipText)
 	{
 		int i;
